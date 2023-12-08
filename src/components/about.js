@@ -6,7 +6,7 @@ const About = () => {
              <div className=' flex bg-hero-pattern w-full bg-center h-[50vh] bg-cover bg-no-repeat relative'>
             <div className='bg-black bg-opacity-25 w-full h-[5rem] absolute bottom-0'  >
 
-            <h1 className=' mx-[8rem] sm:mx-[10rem] text-5xl mt-3 font-Roboto '>About Us</h1>
+            <h1 className=' mx-[8rem] sm:mx-[10rem] text-5xl mt-3 font-Roboto'>About Us</h1>
             </div>
           </div>
           <div className='mx-[3rem] sm:mx-[10rem] sm:mr-[10rem] mt-10  '>
