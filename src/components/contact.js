@@ -3,7 +3,7 @@ import React from 'react';
 
 const Contact = () => {
     return (
-        <div>
+        <div className=' z-0'>
 
             <div className="relative flex items-top justify-center min-h-screen bg-white dark:bg-gray-900 sm:items-center sm:pt-0">
                 <div className="max-w-6xl mx-auto sm:px-6 lg:px-8 mt-[-10rem]">
