@@ -28,18 +28,14 @@ const Footer = () => {
                                 <rect x="14" y="11" width="7" height="12" />
                             </svg>
                             <span className="ml-2 text-xl font-bold tracking-wide text-green-200 uppercase">
-                                Company
+                                Micro Laboratory
                             </span>
                         </a>
                         <div className="mt-6 lg:max-w-sm">
                             <p className="text-sm text-green-200">
-                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                                accusantium doloremque laudantium, totam rem aperiam.
+                                Feel free to contact us anytime via email or phone number.
                             </p>
-                            <p className="mt-4 text-sm text-green-200">
-                                Eaque ipsa quae ab illo inventore veritatis et quasi architecto
-                                beatae vitae dicta sunt explicabo.
-                            </p>
+                            
                         </div>
                     </div>
                     <div className="space-y-2 text-sm">
@@ -49,12 +45,12 @@ const Footer = () => {
                         <div className="flex">
                             <p className="mr-1 text-green-200">Phone:</p>
                             <a
-                                href="tel:850-123-5021"
+                                href="tel:+913379608881"
                                 aria-label="Our phone"
                                 title="Our phone"
                                 className="transition-colors duration-300 text-green-400 hover:text-deep-purple-800"
                             >
-                                850-123-5021
+                                +913379608881   
                             </a>
                         </div>
                         <div className="flex">
@@ -65,7 +61,7 @@ const Footer = () => {
                                 title="Our email"
                                 className="transition-colors duration-300 text-green-400 hover:text-deep-purple-800"
                             >
-                                info@lorem.mail
+                                micro_laboratories@rediffmail.com
                             </a>
                         </div>
                         <div className="flex">
@@ -78,7 +74,7 @@ const Footer = () => {
                                 title="Our address"
                                 className="transition-colors duration-300 text-green-400 hover:text-deep-purple-800"
                             >
-                                312 Lovely Street, NY
+                                138/1, G.T. Road(1st Floor), Uttarpara, Hooghly -712258
                             </a>
                         </div>
                     </div>
@@ -113,10 +109,8 @@ const Footer = () => {
                                 </svg>
                             </a>
                         </div>
-                        <p className="mt-4 text-sm text-gray-500">
-                            Bacon ipsum dolor amet short ribs pig sausage prosciutto chicken
-                            spare ribs salami.
-                        </p>
+                        
+                        
                     </div>
                 </div>
                 <div className="flex flex-col-reverse justify-between pt-5 pb-10 border-t lg:flex-row">

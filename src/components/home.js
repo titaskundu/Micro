@@ -7,6 +7,8 @@ import pic3 from '../assets/product/3.jpg';
 import gmp from '../assets/gmp.svg';
 import verified from '../assets/verified.png';
 import secure from '../assets/secure.png';
+import baeel from '../assets/picture/20231111_120810.jpg';
+import orthnyyl from '../assets/picture/20231111_115948.jpg';
 const Home = () => {
   return (
     <div className='relative ' >
@@ -81,14 +83,14 @@ const Home = () => {
             <span class="absolute flex items-center justify-center w-full h-full text-green-950 text-lg transition-all duration-300 transform group-hover:translate-x-full ease ">View more</span>
             <span class="relative invisible">View more</span>
           </a></div>
-          <div className=' h-full w-full  '><img src={pic2} alt="" className='h-[500px]' /><a href="#_" class=" mt-5 relative inline-flex items-center justify-center p-4  w-[8rem] h-12 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-green-950 rounded-full shadow-md group">
+          <div className=' h-full w-full  '><img src={baeel} alt="" className='h-[500px]' /><a href="#_" class=" mt-5 relative inline-flex items-center justify-center p-4  w-[8rem] h-12 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-green-950 rounded-full shadow-md group">
             <span class="absolute inset-0 flex items-center justify-center w-full h-full text-green-950 duration-300 -translate-x-full bg-green-400 group-hover:translate-x-0 ease">
               <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
             </span>
             <span class="absolute flex items-center justify-center w-full h-full text-green-950 text-lg transition-all duration-300 transform group-hover:translate-x-full ease ">View more</span>
             <span class="relative invisible">View more</span>
           </a></div>
-          <div className=' h-full w-full    '><img src={pic3} alt="" className='h-[500px] ' /><a href="#_" class=" mt-5 relative inline-flex items-center justify-center p-4  w-[8rem] h-12 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-green-950 rounded-full shadow-md group">
+          <div className=' h-full w-full    '><img src={orthnyyl} alt="" className='h-[500px] ' /><a href="#_" class=" mt-5 relative inline-flex items-center justify-center p-4  w-[8rem] h-12 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-green-950 rounded-full shadow-md group">
             <span class="absolute inset-0 flex items-center justify-center w-full h-full text-green-950 duration-300 -translate-x-full bg-green-400 group-hover:translate-x-0 ease">
               <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
             </span>
