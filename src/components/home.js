@@ -9,7 +9,43 @@ import verified from '../assets/verified.png';
 import secure from '../assets/secure.png';
 import baeel from '../assets/picture/20231111_120810.jpg';
 import orthnyyl from '../assets/picture/20231111_115948.jpg';
+import orthonyl from '../assets/visual aid/ORTHO-NYL OIL.jpeg';
+import {
+  Lightbox,
+  initTE,
+} from "tw-elements";
+
+
+
+
+import "./home.css";
+
+import microzyme_ from '../assets/visual aid/microzyme_1.jpg';
+import { useState } from 'react';
+import microbeal from '../assets/visual aid/microbeal.jpg';
+initTE({ Lightbox })
+
+
+export const Modal = ({ src, alt, caption, onClose }) => {
+  return (
+    <div className="modal">
+      <span className="close" onClick={onClose}>
+        &times;
+      </span>
+      <img className="modal-content" src={src} alt={alt} />
+      {caption.length > 0 && <div className="caption">{caption}</div>}
+    </div>
+  )
+}
+
+
 const Home = () => {
+  const [isOpen, setIsOpen] = useState(false)
+  const showModal = () => setIsOpen(true)
+
+  const images = [pic1, baeel, orthnyyl]
+
+
   return (
     <div className='relative ' >
 
@@ -69,28 +105,46 @@ const Home = () => {
       </div>
 
 
-      <div className=' flex bg-[#d1edd1] mt-32 font-sans font-semibold text-4xl sm:text-5xl mx-[3.5rem] sm:mx-[10rem] flex-col sm:h-[52rem] h-[125rem] rounded-2xl '>
+      <div className=' flex bg-[#d1edd1] mt-32 font-sans font-semibold text-4xl sm:text-5xl mx-[0.5rem] sm:mx-[10rem] flex-col sm:h-[52rem] h-[125rem] rounded-2xl '>
         <div className=' mt-16 ml-8'>
 
           <h1 className=' text-green-950'>Our Top Products</h1>
           <hr className=' shadow-md shadow-black mt-2 ml-[-12px]  w-[98%] h-[3px]  bg-black' ></hr>
         </div>
-        <div className='mt-20 mx-[3.5rem] sm:mx-[10rem] grid grid-cols-1 md:grid-cols-3 gap-5  '>
-          <div className=' h-full w-full '><img src={pic1} alt="" className='h-[500px]' /><a href="#_" class=" mt-5 relative inline-flex items-center justify-center p-4  w-[8rem] h-12 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-green-950 rounded-full shadow-md group">
+        <div className='mt-20 mx-[0.5rem] sm:mx-[10rem] grid grid-cols-1 md:grid-cols-3 gap-5  '  data-te-lightbox-init>
+          <div className=' h-full w-full '><img src={pic1} alt="" className='h-[500px]' /><a onClick={showModal} class=" cursor-pointer mt-5 relative inline-flex items-center justify-center p-4  w-[8rem] h-12 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-green-950 rounded-full shadow-md group">
+              {isOpen && (
+                <Modal
+                  src={microzyme_}
+                  alt="snow"
+                  caption="Microzyme"
+                  onClose={() => setIsOpen(false)}
+                />
+              )}
+
             <span class="absolute inset-0 flex items-center justify-center w-full h-full text-green-950 duration-300 -translate-x-full bg-green-400 group-hover:translate-x-0 ease">
               <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
             </span>
             <span class="absolute flex items-center justify-center w-full h-full text-green-950 text-lg transition-all duration-300 transform group-hover:translate-x-full ease ">View more</span>
             <span class="relative invisible">View more</span>
           </a></div>
-          <div className=' h-full w-full  '><img src={baeel} alt="" className='h-[500px]' /><a href="#_" class=" mt-5 relative inline-flex items-center justify-center p-4  w-[8rem] h-12 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-green-950 rounded-full shadow-md group">
+
+          <div className=' h-full w-full  '><img src={baeel} alt="" className='h-[500px]' /><a onClick={showModal} class=" cursor-pointer mt-5 relative inline-flex items-center justify-center p-4  w-[8rem] h-12 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-green-950 rounded-full shadow-md group">
+            {isOpen && (
+              <Modal
+                src={microbeal}
+                alt="snow"
+                caption="Microbael"
+                onClose={() => setIsOpen(false)}
+              />
+            )}
             <span class="absolute inset-0 flex items-center justify-center w-full h-full text-green-950 duration-300 -translate-x-full bg-green-400 group-hover:translate-x-0 ease">
               <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
             </span>
             <span class="absolute flex items-center justify-center w-full h-full text-green-950 text-lg transition-all duration-300 transform group-hover:translate-x-full ease ">View more</span>
             <span class="relative invisible">View more</span>
           </a></div>
-          <div className=' h-full w-full    '><img src={orthnyyl} alt="" className='h-[500px] ' /><a href="#_" class=" mt-5 relative inline-flex items-center justify-center p-4  w-[8rem] h-12 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-green-950 rounded-full shadow-md group">
+          <div className=' h-full w-full    '><img src={orthnyyl} alt="" className='h-[500px] ' /><a href="#_" class=" cursor-pointer mt-5 relative inline-flex items-center justify-center p-4  w-[8rem] h-12 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-green-950 rounded-full shadow-md group">
             <span class="absolute inset-0 flex items-center justify-center w-full h-full text-green-950 duration-300 -translate-x-full bg-green-400 group-hover:translate-x-0 ease">
               <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
             </span>

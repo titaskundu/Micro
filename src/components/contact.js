@@ -1,11 +1,29 @@
 import React from 'react';
+import {useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 
 const Contact = () => {
-    return (
-        <div className=' z-0'>
+    const form = useRef();
 
-            <div className="relative flex items-top justify-center min-h-screen bg-white dark:bg-gray-900 sm:items-center sm:pt-0">
+    const sendEmail = (e) => {
+      e.preventDefault();
+  
+      emailjs.sendForm('service_knb1lni', 'template_itfo39y', form.current, 'IA-7aMbNA1iyJC4dR')
+        .then((result) => {
+            console.log(result.text);
+            alert("Email sent successfully")
+        }, (error) => {
+            console.log(error.text);
+            alert("failed!!")
+        });
+    };
+
+
+    return (
+        <div className='sm:mt-[-1rem] mt-[12rem] z-0'>
+
+            <div className="flex items-top justify-center min-h-screen bg-white dark:bg-gray-900 sm:items-center sm:pt-0">
                 <div className="max-w-6xl mx-auto sm:px-6 lg:px-8 mt-[-10rem]">
                     <div className="mt-8 overflow-hidden">
                         <div className="grid grid-cols-1 md:grid-cols-2">
@@ -47,7 +65,7 @@ const Contact = () => {
                                 </div>
                             </div>
 
-                            <form className="p-6 flex flex-col justify-center">
+                            <form onSubmit={sendEmail} ref={form} className="p-6 flex flex-col justify-center">
                                 <div className="flex flex-col">
                                     <label for="name" className="hidden">Full Name</label>
                                     <input type="name" name="name" id="name" placeholder="Full Name" className="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-green-900 focus:outline-none" />
@@ -55,15 +73,20 @@ const Contact = () => {
 
                                 <div className="flex flex-col mt-2">
                                     <label for="email" className="hidden">Email</label>
-                                    <input type="email" name="email" id="email" placeholder="Email" className="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-green-900 focus:outline-none" />
+                                    <input  type="email" name="email" id="email" placeholder="Email" className="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-green-900 focus:outline-none" />
                                 </div>
 
                                 <div className="flex flex-col mt-2">
                                     <label for="tel" className="hidden">Number</label>
-                                    <input type="tel" name="tel" id="tel" placeholder="Telephone Number" className="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-green-900 focus:outline-none" />
+                                    <input  type="tel" name="tel" id="tel" placeholder="Telephone Number" className="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-green-900 focus:outline-none" />
                                 </div>
 
-                                <button type="submit" className="md:w-32 bg-green-800 hover:bg-blue-dark text-white font-bold py-3 px-6 rounded-lg mt-3 hover:bg-green-600 transition ease-in-out duration-300">
+                                <div className="flex flex-col mt-2">
+                                    <label for="text" className="hidden">Write Something to us...</label>
+                                    <input  type="text" name="text" id="text" placeholder="Write Something to us..." className="w-100 h-[10rem] placeholder:mt-[-2rem] mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-green-900 focus:outline-none"  />
+                                </div>
+
+                                <button type="submit" value="Send" className="md:w-32 bg-green-800 hover:bg-blue-dark text-white font-bold py-3 px-6 rounded-lg mt-3 hover:bg-green-600 transition ease-in-out duration-300">
                                     Submit
                                 </button>
                             </form>
